@@ -674,7 +674,7 @@ export default function AdminClient({
           <div className="cms-grid-layout" style={{ display: "grid", gridTemplateColumns: "1.2fr 1.8fr", gap: "3rem", alignItems: "start" }}>
             
             {/* LEFT Column: Real Metric Sliders/Inputs */}
-            <div className="cms-form-card" style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
+            <div className="cms-form-card" style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
               <div style={{ marginBottom: "1.5rem" }}>
                 <h3 style={{ fontSize: "1.25rem", color: "var(--color-primary)", marginBottom: "0.25rem" }}>Startup Metrics Configuration</h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--color-text-light)", margin: 0 }}>Values are used to draw zero lines, calculate progress, and report live impact stats.</p>
@@ -727,7 +727,7 @@ export default function AdminClient({
 
             {/* RIGHT Column: Site content Key-Values */}
             <div className="cms-content-editor-grid" style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-              <div style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
+              <div style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
                 <h3 style={{ fontSize: "1.25rem", color: "var(--color-primary)", marginBottom: "1rem" }}>Homepage Text Blocks</h3>
                 
                 <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
@@ -771,7 +771,7 @@ export default function AdminClient({
                 </div>
               </div>
 
-              <div style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
+              <div style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
                 <h3 style={{ fontSize: "1.25rem", color: "var(--color-primary)", marginBottom: "1rem" }}>About Us Values</h3>
                 
                 <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
@@ -815,7 +815,7 @@ export default function AdminClient({
                 </div>
               </div>
 
-              <div style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
+              <div style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
                 <h3 style={{ fontSize: "1.25rem", color: "var(--color-primary)", marginBottom: "1rem" }}>Contact coordinates</h3>
                 
                 <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
@@ -889,7 +889,7 @@ export default function AdminClient({
           <div className="cms-grid-layout" style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "3rem", alignItems: "start" }}>
             
             {/* List selector */}
-            <div className="cms-sidebar-list" style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "1.5rem", boxShadow: "var(--shadow-sm)", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <div className="cms-sidebar-list" style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "1.5rem", boxShadow: "var(--shadow-sm)", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               <h3 style={{ fontSize: "1.1rem", padding: "0 0.5rem 0.5rem", borderBottom: "1px solid var(--color-border)", marginBottom: "0.5rem" }}>Syllabus Cohorts</h3>
               {programs.map((prog) => (
                 <button 
@@ -919,7 +919,7 @@ export default function AdminClient({
 
             {/* Editor Detail */}
             {selectedProgram && (
-              <div className="cms-form-card" style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
+              <div className="cms-form-card" style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "2.5rem", boxShadow: "var(--shadow-sm)" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid var(--color-border)", paddingBottom: "1rem", marginBottom: "2rem" }}>
                   <div>
                     <h3 style={{ fontSize: "1.25rem", margin: 0 }}>Configure program: {selectedProgram.title}</h3>
@@ -1044,7 +1044,7 @@ export default function AdminClient({
 
             <div className="events-admin-list" style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               {events.length > 0 ? events.map((ev) => (
-                <div key={ev.id} className="event-admin-card" style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-lg)", padding: "2rem", boxShadow: "var(--shadow-sm)", display: "grid", gridTemplateColumns: "2.5fr 1.5fr", gap: "2rem" }}>
+                <div key={ev.id} className="event-admin-card" style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-lg)", padding: "2rem", boxShadow: "var(--shadow-sm)", display: "grid", gridTemplateColumns: "2.5fr 1.5fr", gap: "2rem" }}>
                   <div>
                     <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "0.5rem" }}>
                       <span className="role-badge" style={{ background: "var(--color-primary-light)", color: "var(--color-primary)" }}>{ev.category}</span>
@@ -1083,7 +1083,7 @@ export default function AdminClient({
                   </div>
                 </div>
               )) : (
-                <div style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "4rem", textAlign: "center", color: "var(--color-text-light)" }}>
+                <div style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "4rem", textAlign: "center", color: "var(--color-text-light)" }}>
                   No scheduled events scheduled. Click "Schedule New Event" to set up your first cohort workshop.
                 </div>
               )}
@@ -1108,7 +1108,7 @@ export default function AdminClient({
 
             <div className="resources-grid-cabinet" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(360px, 1fr))", gap: "1.5rem" }}>
               {resources.length > 0 ? resources.map((res) => (
-                <div key={res.id} className="resource-cabinet-card" style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-lg)", padding: "2rem", boxShadow: "var(--shadow-sm)", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                <div key={res.id} className="resource-cabinet-card" style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-lg)", padding: "2rem", boxShadow: "var(--shadow-sm)", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                   <div>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
                       <span className="role-badge" style={{ background: "var(--color-accent-light)", color: "var(--color-accent)" }}>{res.category}</span>
@@ -1129,7 +1129,7 @@ export default function AdminClient({
                   </div>
                 </div>
               )) : (
-                <div style={{ gridColumn: "1 / -1", background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "4rem", textAlign: "center", color: "var(--color-text-light)" }}>
+                <div style={{ gridColumn: "1 / -1", background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-md)", padding: "4rem", textAlign: "center", color: "var(--color-text-light)" }}>
                   No dynamic guide resources found in cabinet. Tap "Compile New Resource" to draft text documents.
                 </div>
               )}
@@ -1154,7 +1154,7 @@ export default function AdminClient({
 
             <div className="faq-dashboard-list" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               {faqs.map((faq) => (
-                <div key={faq.id} className="faq-admin-card animate-fade-in" style={{ background: "#ffffff", border: "1px solid var(--color-border)", borderRadius: "var(--radius-sm)", padding: "1.5rem", boxShadow: "var(--shadow-sm)", display: "flex", justifyContent: "space-between", gap: "2rem", alignItems: "start" }}>
+                <div key={faq.id} className="faq-admin-card animate-fade-in" style={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-sm)", padding: "1.5rem", boxShadow: "var(--shadow-sm)", display: "flex", justifyContent: "space-between", gap: "2rem", alignItems: "start" }}>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                     <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
                       <span className="role-badge" style={{ background: "rgba(0,0,0,0.05)", border: "none" }}>{faq.category}</span>
