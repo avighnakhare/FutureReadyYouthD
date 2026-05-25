@@ -43,3 +43,7 @@ next-env.d.ts
 /src/generated/prisma
 
 # SQLite databases
+*.db
+db_state.json
+test-kv.js
+
