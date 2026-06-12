@@ -687,32 +687,31 @@ export default function AdminClient({
               )}
 
               <form onSubmit={handleMetricsSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-                {[
+                 {[
                   { field: "studentsReached", label: "Students Reached", color: "#3B82F6" },
                   { field: "volunteersEngaged", label: "Volunteers Engaged", color: "#EF4444" },
                   { field: "serviceHours", label: "Service Hours", color: "#10B981" },
                   { field: "communityProjects", label: "Community Projects", color: "#F59E0B" },
                   { field: "eventsHosted", label: "Events Hosted", color: "#6366F1" },
                   { field: "mentors", label: "Mentors Active", color: "#EC4899" },
-                  { field: "donationsReceived", label: "Donations ($USD)", color: "#14B8A6", isFloat: true },
                   { field: "resourcesDistributed", label: "Resources Downloaded", color: "#8B5CF6" },
                   { field: "partnerships", label: "Partners & Sponsors", color: "#F43F5E" }
-                ].map(({ field, label, color, isFloat }) => (
+                ].map(({ field, label, color }) => (
                   <div className="form-group" key={field} style={{ margin: 0 }}>
                     <label style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", fontWeight: 700, color: "var(--color-text)", marginBottom: "0.35rem" }}>
                       <span>{label}</span>
                       <strong style={{ color }}>
-                        {isFloat ? `$${metrics[field as keyof SystemMetric]}` : metrics[field as keyof SystemMetric]}
+                        {metrics[field as keyof SystemMetric]}
                       </strong>
                     </label>
                     <input 
                       type="number" 
                       min={0}
-                      step={isFloat ? "0.01" : "1"}
+                      step="1"
                       value={metrics[field as keyof SystemMetric] ?? 0}
                       onChange={(e) => {
-                        const parsed = isFloat ? parseFloat(e.target.value) : parseInt(e.target.value);
-                        setMetrics({ ...metrics, [field]: isFloat ? (parsed || 0) : (parsed || 0) });
+                        const parsed = parseInt(e.target.value) || 0;
+                        setMetrics({ ...metrics, [field]: parsed });
                       }}
                       style={{ width: "100%", padding: "0.65rem", border: "1px solid var(--color-border)", borderRadius: "var(--radius-sm)", outline: "none", fontSize: "0.9rem" }}
                     />

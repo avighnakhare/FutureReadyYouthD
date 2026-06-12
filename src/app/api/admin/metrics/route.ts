@@ -21,7 +21,6 @@ export async function PATCH(req: Request) {
         communityProjects: Math.max(0, parseInt(data.communityProjects) || 0),
         eventsHosted: Math.max(0, parseInt(data.eventsHosted) || 0),
         mentors: Math.max(0, parseInt(data.mentors) || 0),
-        donationsReceived: Math.max(0, parseFloat(data.donationsReceived) || 0),
         resourcesDistributed: Math.max(0, parseInt(data.resourcesDistributed) || 0),
         partnerships: Math.max(0, parseInt(data.partnerships) || 0)
       }

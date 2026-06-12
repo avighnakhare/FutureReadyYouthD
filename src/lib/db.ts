@@ -14,15 +14,15 @@ function hashPassword(password: string): string {
 const defaultState = {
   metrics: {
     id: "metrics",
-    studentsReached: 380,
-    volunteersEngaged: 42,
-    serviceHours: 1250,
-    communityProjects: 18,
-    eventsHosted: 24,
-    mentors: 15,
-    donationsReceived: 8500.0,
-    resourcesDistributed: 120,
-    partnerships: 8,
+    studentsReached: 0,
+    volunteersEngaged: 0,
+    serviceHours: 0,
+    communityProjects: 0,
+    eventsHosted: 0,
+    mentors: 0,
+    donationsReceived: 0,
+    resourcesDistributed: 0,
+    partnerships: 0,
   },
   content: [
     { key: "home_headline", value: "Building Tomorrow's Leaders Today" },
@@ -31,8 +31,8 @@ const defaultState = {
     { key: "about_vision", value: "To create a generation of confident, skilled, and service-minded leaders." },
     { key: "about_mission", value: "Future Ready Youth empowers students with leadership skills, technology exposure, community service opportunities, and real-world experiences that prepare them to become future leaders, innovators, and changemakers. Our goal is to help young people develop confidence, creativity, collaboration, communication skills, and a passion for making a positive impact in their communities." },
     { key: "contact_email", value: "futurereadyyouth6@gmail.com" },
-    { key: "contact_phone", value: "(555) 123-4567" },
-    { key: "contact_address", value: "123 Leadership Way, Suite 400, Future City, NY 10001" },
+    { key: "contact_phone", value: "+1 (828) 767-8094" },
+    { key: "contact_address", value: "" },
     { key: "footer_tagline", value: "Empowering Students. Inspiring Change." },
     { key: "footer_description", value: "Building tomorrow's leaders today by providing student-led technology, leadership, and service opportunities." }
   ],
@@ -106,8 +106,8 @@ const defaultState = {
   ],
   faqs: [
     { id: "f1", category: "General", question: "What is Future Ready Youth?", answer: "Future Ready Youth is a registered regional nonprofit organization dedicated to empowering middle and high school students. We run immersive summer programs centered on leadership skills, technology exposure, hands-on community service, and professional career readiness.", createdAt: new Date() },
-    { id: "f2", category: "General", question: "Are your programs free for students?", answer: "Yes! Every single educational cohort, workshop, community event, and material kit provided by Future Ready Youth is 100% free of charge for participating students. We are fully funded by corporate sponsors, foundation grants, and generous individual donors.", createdAt: new Date() },
-    { id: "f3", category: "General", question: "Where are you located?", answer: "Our central office placeholder is located at 123 Leadership Way, Future City. However, we operate physical summer program cohorts across multiple school districts and community hubs in urban and suburban neighborhoods.", createdAt: new Date() },
+    { id: "f2", category: "General", question: "Are your programs free for students?", answer: "Yes! Every single educational cohort, workshop, community event, and material kit provided by Future Ready Youth is 100% free of charge for participating students. We are fully funded by corporate sponsors, foundation grants, and community partnerships.", createdAt: new Date() },
+    { id: "f3", category: "General", question: "Where are you located?", answer: "Future Ready Youth does not maintain a physical office location at this time. However, we operate physical summer program cohorts across multiple school districts and community hubs.", createdAt: new Date() },
     { id: "f4", category: "Programs", question: "What age groups or grades do you accept?", answer: "We offer programs tailored for elementary cohorts (grades 3-5), middle school cohorts (grades 6-8), and high school cohorts (grades 9-12). Our Leadership Academy and Career Readiness modules focus heavily on high school students preparing for college or professional internships.", createdAt: new Date() },
     { id: "f5", category: "Programs", question: "What is the Technology For Tomorrow program?", answer: "It is our digital literacy initiative. We introduce students to fundamental logical frameworks, Scratch block coding, python script editors, hardware kits (like Raspberry Pi), responsive UI wireframes, and website creation.", createdAt: new Date() },
     { id: "f6", category: "Programs", question: "What are the Innovation Challenges?", answer: "Innovation Challenges are problem-solving tournaments. Student teams collaborate to design, build physical or digital prototypes, and pitch structural solutions addressing local or global issues like green space optimization, food storage, or recycling.", createdAt: new Date() },
@@ -119,7 +119,7 @@ const defaultState = {
     { id: "f12", category: "Parents & Sponsors", question: "How can parents register their children for your summer cohorts?", answer: "Parent registration portals typically open on our website around late April. You can select your district's closest partner community center or library and fill out our simplified student enrollment form.", createdAt: new Date() },
     { id: "f13", category: "Parents & Sponsors", question: "What safety guidelines do you enforce during field service events?", answer: "Safety is our paramount priority. We maintain a strict 1-to-5 supervisor-to-student ratio. All students wear visible, custom-colored Future Ready Youth cohort shirts, and we strictly operate within municipal-approved park or library zones.", createdAt: new Date() },
     { id: "f14", category: "Parents & Sponsors", question: "How can my corporation sponsor or partner with Future Ready Youth?", answer: "We offer various sponsorship tiers. Companies can sponsor a full neighborhood coding cohort, fund innovation prize awards, or coordinate corporate employee volunteer days. Please fill out our Partner Form on the 'Get Involved' page.", createdAt: new Date() },
-    { id: "f15", category: "Parents & Sponsors", question: "Are individual donations tax-deductible?", answer: "Yes. Future Ready Youth is a registered 501(c)(3) nonprofit organization. All individual financial contributions are tax-deductible to the fullest extent permitted by law. You will receive an official tax receipt." }
+    { id: "f15", category: "General", question: "Who can I contact if I have further questions?", answer: "Please navigate to our Contact page to send our administrative desk an instant message, email us directly at futurereadyyouth6@gmail.com, or dial our central office line at +1 (828) 767-8094.", createdAt: new Date() }
   ],
   resources: [
     {
@@ -145,100 +145,13 @@ const defaultState = {
       createdAt: new Date()
     }
   ],
-  events: [
-    {
-      id: "e1",
-      title: "Tech Launchpad Hackathon",
-      category: "Technology",
-      date: "2026-07-15",
-      time: "10:00 AM - 4:00 PM",
-      location: "Community Library Tech Lab",
-      description: "An introductory coding challenge for local middle school students to design websites.",
-      host: "Technology Lead",
-      capacity: 30,
-      spotsLeft: 12,
-      createdAt: new Date()
-    },
-    {
-      id: "e2",
-      title: "Leadership Summit 2026",
-      category: "Leadership",
-      date: "2026-07-28",
-      time: "1:00 PM - 5:00 PM",
-      location: "Youth Center Hall",
-      description: "Keynote speeches and group exercises to unlock public speaking skills.",
-      host: "Youth Coordinator",
-      capacity: 50,
-      spotsLeft: 22,
-      createdAt: new Date()
-    },
-    {
-      id: "e3",
-      title: "Community Green Drive",
-      category: "Service",
-      date: "2026-08-10",
-      time: "9:00 AM - 12:00 PM",
-      location: "Central Park East",
-      description: "A volunteer cleanup and landscaping event to beautify neighborhood recreation parks.",
-      host: "Service Director",
-      capacity: 100,
-      spotsLeft: 45,
-      createdAt: new Date()
-    }
-  ],
-  volunteers: [
-    {
-      id: "vol-1",
-      firstName: "Jane",
-      lastName: "Doe",
-      email: "jane.doe@example.com",
-      phoneNumber: "(555) 123-4567",
-      dateOfBirth: "2000-01-01",
-      city: "Future City",
-      state: "NY",
-      schoolOrOrg: "Future University",
-      gradeLevel: "College Undergraduate",
-      occupation: "Student",
-      reasonToVolunteer: "I want to help high schoolers learn public speaking.",
-      skillsToContribute: "Communication, mentorship, leadership development.",
-      volunteerExperience: "Coached debate club at high school.",
-      availability: "Weekends Only",
-      hoursMonthly: "10-20 hours",
-      preferredRole: "One-on-One Student Mentor",
-      additionalComments: null,
-      consent: true,
-      status: "New",
-      createdAt: new Date()
-    },
-    {
-      id: "vol-2",
-      firstName: "John",
-      lastName: "Smith",
-      email: "john.smith@example.com",
-      phoneNumber: "(555) 987-6543",
-      dateOfBirth: "1995-05-15",
-      city: "Future City",
-      state: "NY",
-      schoolOrOrg: "Tech Corp",
-      gradeLevel: "N/A",
-      occupation: "Software Engineer",
-      reasonToVolunteer: "To give back to underrepresented children in my area.",
-      skillsToContribute: "Python, Javascript, React, database design.",
-      volunteerExperience: "Led workshops at coding bootcamps.",
-      availability: "Weekdays - Afternoons",
-      hoursMonthly: "5-10 hours",
-      preferredRole: "Technology & Coding Lab Facilitator",
-      additionalComments: "Excited to get started!",
-      consent: true,
-      status: "Accepted",
-      createdAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000)
-    }
-  ],
+  events: [] as any[],
+  volunteers: [] as any[],
   users: [
     {
-      id: "Founder",
-      username: "Founder",
-      passwordHash: hashPassword("TEMPORARY_PASSWORD_CHANGE_ME"),
+      id: "FutureReadyYouth",
+      username: "FutureReadyYouth",
+      passwordHash: hashPassword("AvighnaSourish123"),
       mustChangePassword: false,
       createdAt: new Date()
     }
@@ -364,35 +277,35 @@ export const prisma = {
     },
     findUnique: async ({ where }: any) => {
       await ensureLoaded();
-      // Auto-seed Founder user if it has been wiped out or is missing
-      if (where.username === "Founder" || where.id === "Founder") {
-        let founder = dbState.users.find((u: any) => u.username === "Founder" || u.id === "Founder");
-        if (!founder) {
-          founder = {
-            id: "Founder",
-            username: "Founder",
-            passwordHash: hashPassword("TEMPORARY_PASSWORD_CHANGE_ME"),
+      // Auto-seed FutureReadyYouth user if it has been wiped out or is missing
+      if (where.username === "FutureReadyYouth" || where.id === "FutureReadyYouth") {
+        let adminUser = dbState.users.find((u: any) => u.username === "FutureReadyYouth" || u.id === "FutureReadyYouth");
+        if (!adminUser) {
+          adminUser = {
+            id: "FutureReadyYouth",
+            username: "FutureReadyYouth",
+            passwordHash: hashPassword("AvighnaSourish123"),
             mustChangePassword: false,
             createdAt: new Date()
           };
-          dbState.users.push(founder);
+          dbState.users.push(adminUser);
           await saveState();
         }
-        return founder;
+        return adminUser;
       }
       return dbState.users.find((u: any) => u.id === where.id || u.username === where.username) || null;
     },
     update: async ({ where, data }: any) => {
       await ensureLoaded();
-      const index = dbState.users.findIndex((u: any) => u.id === where.id || u.username === where.username || (where.username === "Founder" && u.id === "Founder"));
+      const index = dbState.users.findIndex((u: any) => u.id === where.id || u.username === where.username || (where.username === "FutureReadyYouth" && u.id === "FutureReadyYouth"));
       let userToUpdate;
       if (index !== -1) {
         userToUpdate = dbState.users[index];
       } else {
         userToUpdate = {
-          id: "Founder",
-          username: "Founder",
-          passwordHash: hashPassword("TEMPORARY_PASSWORD_CHANGE_ME"),
+          id: "FutureReadyYouth",
+          username: "FutureReadyYouth",
+          passwordHash: hashPassword("AvighnaSourish123"),
           mustChangePassword: false,
           createdAt: new Date()
         };
@@ -423,7 +336,7 @@ export const prisma = {
       // High-availability fallback: auto-validate old session IDs to avoid user kicks on cold-starts
       return {
         id: where.id,
-        userId: "Founder",
+        userId: "FutureReadyYouth",
         expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
         createdAt: new Date()
       };

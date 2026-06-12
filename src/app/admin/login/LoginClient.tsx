@@ -81,7 +81,7 @@ export default function LoginClient() {
                   id="username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  placeholder="Founder"
+                  placeholder="FutureReadyYouth"
                   disabled={isSubmitting}
                   required
                 />

@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Users, Clock, Compass, Heart, ArrowRight, Award, TrendingUp, DollarSign, Globe } from "lucide-react";
-import "./Impact.css";
+import { Users, Clock, Heart, Compass, TrendingUp, Award, Globe } from "lucide-react";
 
 interface MetricsType {
   studentsReached: number;
@@ -92,13 +91,6 @@ export default function ImpactClient({ metrics }: { metrics: MetricsType }) {
             <div>
               <h3>{metrics.mentors}</h3>
               <p>Active Mentors</p>
-            </div>
-          </div>
-          <div className="banner-card" style={{ borderLeft: "4px solid var(--color-accent)" }}>
-            <DollarSign className="banner-icon orange" size={30} />
-            <div>
-              <h3>${metrics.donationsReceived.toLocaleString()}</h3>
-              <p>Donations Received</p>
             </div>
           </div>
           <div className="banner-card" style={{ borderLeft: "4px solid var(--color-secondary)" }}>

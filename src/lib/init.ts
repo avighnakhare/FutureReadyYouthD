@@ -8,9 +8,9 @@ export async function initializeDatabase() {
     if (adminCount === 0) {
       await prisma.user.create({
         data: {
-          username: "Founder",
-          passwordHash: hashPassword("TEMPORARY_PASSWORD_CHANGE_ME"),
-          mustChangePassword: true
+          username: "FutureReadyYouth",
+          passwordHash: hashPassword("AvighnaSourish123"),
+          mustChangePassword: false
         }
       });
       console.log("Database initialized: Admin account seeded successfully.");
@@ -48,19 +48,19 @@ export async function initializeDatabase() {
         { key: "about_mission", value: "Future Ready Youth empowers students with leadership skills, technology exposure, community service opportunities, and real-world experiences that prepare them to become future leaders, innovators, and changemakers. Our goal is to help young people develop confidence, creativity, collaboration, communication skills, and a passion for making a positive impact in their communities." },
         
         { key: "contact_email", value: "futurereadyyouth6@gmail.com" },
-        { key: "contact_phone", value: "(555) 123-4567" },
-        { key: "contact_address", value: "123 Leadership Way, Suite 400, Future City, NY 10001" },
+        { key: "contact_phone", value: "+1 (828) 767-8094" },
+        { key: "contact_address", value: "" },
         
         { key: "footer_tagline", value: "Empowering Students. Inspiring Change." },
         { key: "footer_description", value: "Building tomorrow's leaders today by providing student-led technology, leadership, and service opportunities." }
       ];
-
+ 
       await prisma.content.createMany({
         data: defaultContent
       });
       console.log("Database initialized: CMS Site text seeded.");
     }
-
+ 
     // 4. Initialize Core Programs (6 Cohorts)
     const programsCount = await prisma.program.count();
     if (programsCount === 0) {
@@ -126,20 +126,20 @@ export async function initializeDatabase() {
           themeClass: "yellow"
         }
       ];
-
+ 
       await prisma.program.createMany({
         data: defaultPrograms
       });
       console.log("Database initialized: Programs seeded.");
     }
-
+ 
     // 5. Initialize FAQs
     const faqCount = await prisma.faq.count();
     if (faqCount === 0) {
       const defaultFaqs = [
         { category: "General", question: "What is Future Ready Youth?", answer: "Future Ready Youth is a registered regional nonprofit organization dedicated to empowering middle and high school students. We run immersive summer programs centered on leadership skills, technology exposure, hands-on community service, and professional career readiness." },
-        { category: "General", question: "Are your programs free for students?", answer: "Yes! Every single educational cohort, workshop, community event, and material kit provided by Future Ready Youth is 100% free of charge for participating students. We are fully funded by corporate sponsors, foundation grants, and generous individual donors." },
-        { category: "General", question: "Where are you located?", answer: "Our central office placeholder is located at 123 Leadership Way, Future City. However, we operate physical summer program cohorts across multiple school districts and community hubs in urban and suburban neighborhoods." },
+        { category: "General", question: "Are your programs free for students?", answer: "Yes! Every single educational cohort, workshop, community event, and material kit provided by Future Ready Youth is 100% free of charge for participating students. We are fully funded by corporate sponsors, foundation grants, and community partnerships." },
+        { category: "General", question: "Where are you located?", answer: "Future Ready Youth does not maintain a physical office location at this time. However, we operate physical summer program cohorts across multiple school districts and community hubs." },
         { category: "Programs", question: "What age groups or grades do you accept?", answer: "We offer programs tailored for elementary cohorts (grades 3-5), middle school cohorts (grades 6-8), and high school cohorts (grades 9-12). Our Leadership Academy and Career Readiness modules focus heavily on high school students preparing for college or professional internships." },
         { category: "Programs", question: "What is the Technology For Tomorrow program?", answer: "It is our digital literacy initiative. We introduce students to fundamental logical frameworks, Scratch block coding, python script editors, hardware kits (like Raspberry Pi), responsive UI wireframes, and website creation." },
         { category: "Programs", question: "What are the Innovation Challenges?", answer: "Innovation Challenges are problem-solving tournaments. Student teams collaborate to design, build physical or digital prototypes, and pitch structural solutions addressing local or global issues like green space optimization, food storage, or recycling." },
@@ -151,8 +151,7 @@ export async function initializeDatabase() {
         { category: "Parents & Sponsors", question: "How can parents register their children for your summer cohorts?", answer: "Parent registration portals typically open on our website around late April. You can select your district's closest partner community center or library and fill out our simplified student enrollment form." },
         { category: "Parents & Sponsors", question: "What safety guidelines do you enforce during field service events?", answer: "Safety is our paramount priority. We maintain a strict 1-to-5 supervisor-to-student ratio. All students wear visible, custom-colored Future Ready Youth cohort shirts, and we strictly operate within municipal-approved park or library zones." },
         { category: "Parents & Sponsors", question: "How can my corporation sponsor or partner with Future Ready Youth?", answer: "We offer various sponsorship tiers. Companies can sponsor a full neighborhood coding cohort, fund innovation prize awards, or coordinate corporate employee volunteer days. Please fill out our Partner Form on the 'Get Involved' page." },
-        { category: "Parents & Sponsors", question: "Are individual donations tax-deductible?", answer: "Yes. Future Ready Youth is a registered 501(c)(3) nonprofit organization. All individual financial contributions are tax-deductible to the fullest extent permitted by law. You will receive an official tax receipt." },
-        { category: "General", question: "Who can I contact if I have further questions?", answer: "Please navigate to our Contact page to send our administrative desk an instant message, email us directly at futurereadyyouth6@gmail.com, or dial our central office line at (555) 123-4567." }
+        { category: "General", question: "Who can I contact if I have further questions?", answer: "Please navigate to our Contact page to send our administrative desk an instant message, email us directly at futurereadyyouth6@gmail.com, or dial our central office line at +1 (828) 767-8094." }
       ];
 
       await prisma.faq.createMany({

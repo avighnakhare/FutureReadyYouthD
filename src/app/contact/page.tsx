@@ -16,10 +16,9 @@ export default async function ContactPage() {
       }
     }
   });
-
   const email = content.find(c => c.key === "contact_email")?.value || "futurereadyyouth6@gmail.com";
-  const phone = content.find(c => c.key === "contact_phone")?.value || "(555) 123-4567";
-  const address = content.find(c => c.key === "contact_address")?.value || "123 Leadership Way, Suite 400, Future City, NY 10001";
+  const phone = content.find(c => c.key === "contact_phone")?.value || "";
+  const address = content.find(c => c.key === "contact_address")?.value || "";
 
   return <ContactClient email={email} phone={phone} address={address} />;
 }

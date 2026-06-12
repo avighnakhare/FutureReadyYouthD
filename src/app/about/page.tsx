@@ -122,45 +122,55 @@ export default async function About() {
         </div>
       </section>
 
-      {/* Meet the Founder (Seeded Founder Biography Area) */}
+      {/* Meet the Co-Founders (Actual Leadership Area) */}
       <section className="founder-section">
-        <div className="container founder-grid">
-          <div className="founder-photo-side">
-            <div className="founder-photo-card">
-              <div className="founder-photo-avatar">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" 
-                  alt="Alex Johnson - Founder & Director" 
-                  className="founder-real-img"
-                />
+        <div className="container" style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
+          <div className="founder-info-side text-center" style={{ alignItems: "center", width: "100%", maxWidth: "100%", gap: "1rem" }}>
+            <span className="card-tag">Leadership Team</span>
+            <h2>Meet Our Co-Founders</h2>
+            <p className="founder-quote" style={{ borderLeft: "none", paddingLeft: 0, textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
+              "Every young person carries a spark of genius. Our job is to give them the tools, the tech, the mentors, and the space to let that spark burn bright."
+            </p>
+          </div>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "3rem", marginTop: "1rem" }}>
+            {/* Co-Founder 1: Avighna Khare */}
+            <div className="founder-photo-card" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <div className="founder-photo-avatar" style={{ background: "var(--color-primary-light)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-primary)" }}>
+                <User size={48} />
               </div>
               <div className="founder-photo-details">
-                <h3>Alex Johnson</h3>
-                <p className="founder-title">Founder & Director</p>
+                <h3>Avighna Khare</h3>
+                <p className="founder-title">Co-Founder & Director</p>
+                <p style={{ color: "var(--color-text-muted)", fontSize: "0.95rem", lineHeight: 1.6, marginBottom: "1.5rem" }}>
+                  Information Required From Organization
+                </p>
                 <div className="founder-socials">
-                  <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="founder-social-link" aria-label="LinkedIn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '4px'}}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
-                  </a>
                   <a href="mailto:futurereadyyouth6@gmail.com" className="founder-social-link" aria-label="Email">
                     <Mail size={16} style={{marginRight: '4px'}} /> Email
                   </a>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="founder-info-side">
-            <span className="card-tag">Meet Our Founder</span>
-            <h2>A Vision for Change</h2>
-            <p className="founder-quote">
-              "Every young person carries a spark of genius. Our job is to give them the tools, the tech, the mentors, and the space to let that spark burn bright."
-            </p>
-            <p>
-              Alex Johnson founded Future Ready Youth after spending years tutoring and mentoring young students in underserved neighborhoods. He noticed a persistent issue: traditional curricula rarely had the room to cover essential modern life tools like software coding, team leadership mechanics, and structural community collaboration.
-            </p>
-            <p>
-              Under his guidance, Future Ready Youth has evolved from a small neighborhood summer circle into an accredited regional nonprofit, connecting college mentors with eager student cohorts.
-            </p>
+            {/* Co-Founder 2: Sourish Kura */}
+            <div className="founder-photo-card" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <div className="founder-photo-avatar" style={{ background: "var(--color-primary-light)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-primary)" }}>
+                <User size={48} />
+              </div>
+              <div className="founder-photo-details">
+                <h3>Sourish Kura</h3>
+                <p className="founder-title">Co-Founder & Director</p>
+                <p style={{ color: "var(--color-text-muted)", fontSize: "0.95rem", lineHeight: 1.6, marginBottom: "1.5rem" }}>
+                  Information Required From Organization
+                </p>
+                <div className="founder-socials">
+                  <a href="mailto:futurereadyyouth6@gmail.com" className="founder-social-link" aria-label="Email">
+                    <Mail size={16} style={{marginRight: '4px'}} /> Email
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

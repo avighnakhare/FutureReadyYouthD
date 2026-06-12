@@ -15,7 +15,7 @@ const SITE_PAGES = [
   { name: "Events Calendar", url: "/events", keywords: "events calendar workshops meetings service registrations" },
   { name: "Impact Metrics", url: "/impact", keywords: "impact growth charts stats achievements success stories youth" },
   { name: "Resources & Guides", url: "/resources", keywords: "resources leadership technology career guides download pdf" },
-  { name: "Get Involved", url: "/involved", keywords: "get involved donate sponsor mentor partnership support" },
+  { name: "Get Involved", url: "/involved", keywords: "get involved sponsor mentor partnership support" },
   { name: "Frequently Asked Questions", url: "/faq", keywords: "faq questions help support details info" },
   { name: "Contact Us", url: "/contact", keywords: "contact email maps phone address support office" },
   { name: "Admin Dashboard", url: "/admin", keywords: "admin dashboard control secure login tables charts status" }
